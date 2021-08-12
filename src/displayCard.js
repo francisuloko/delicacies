@@ -1,12 +1,16 @@
 import Like from './like.js';
+import Comment from './comment.js';
+import { popUp } from './utilities.js';
 
+
+const like = new Like();
+const comment = new Comment();
 // function countMeal(res) {
 //   return res.meals.length;
 // }
+// const mealsCount = countMeal(res);
 
 export default function displayCard(res) {
-  // const mealsCount = countMeal(res);
-  const like = new Like();
   const grid = document.getElementById('meals-grid');
   grid.innerHTML = '';
   for (let i = 0; i < 8; i += 1) {
@@ -18,11 +22,14 @@ export default function displayCard(res) {
         <span class="w-100">${res.meals[i].strMeal}</span>
         <button id="${res.meals[i].idMeal}" type="button" class="like-button btn text-primary">Like</button>
       </div><span class="likes p-2 text-secondary fs-6"></span>
-      <button type="button" id="comment" class="w-100 btn-primary">Comment</button>`;
+      <button data-modal-target="#modal" type="button" data-id="${res.meals[i].idMeal}" data-modal-target="#modal" id="comment" class="w-100 btn-primary comment-button">Comment</button>`;
     grid.appendChild(card);
   }
+
   const likeButtons = document.querySelectorAll('.like-button');
-  likeButtons.forEach((button) => {
-    button.addEventListener('click', like.create);
-  });
+  const commentButtons = document.querySelectorAll('.comment-button')
+  for(let i=0; i < commentButtons.length; i+=1){
+    commentButtons[i].addEventListener('click', popUp)
+    likeButtons[i].addEventListener('click', like.create);
+  }
 }
