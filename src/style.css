@@ -68,3 +68,11 @@ footer {
   border-top-style: solid;
   border-top-color: #333;
 }
+
+.likes {
+  text-align: right;
+}
+
+.likes::after {
+  content: " Likes";
+}
