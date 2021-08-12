@@ -1,0 +1,7 @@
+.likes {
+  text-align: right;
+}
+
+.likes::after {
+  content: " Likes";
+}
