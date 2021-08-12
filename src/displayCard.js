@@ -1,9 +1,9 @@
-export default function displayCard(meals){
+export default function displayCard(meals) {
   const grid = document.getElementById('meals-grid');
   grid.innerHTML = '';
-  meals.forEach (meal => {
-    const card = createElement('div')
-    card.setAttribute('class', 'col-sm-4 themed-grid-col')
+  meals.forEach((meal) => {
+    const card = document.createElement('div');
+    card.setAttribute('class', 'col-sm-4 themed-grid-col');
     card.innerHTML = `
       <img src="${meal}" alt="sample image">
       <div class="d-flex justify-content-between">
@@ -12,6 +12,6 @@ export default function displayCard(meals){
       </div>
       <p class="counter">Counter</p>
       <button type="button" id="comment">Comment</button>`;
-    grid.appendChild(card)
+    grid.appendChild(card);
   });
 }
