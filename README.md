@@ -30,6 +30,9 @@ In this project, we have:
 ## Live Demo
 Click [here](https://francisuloko.github.io/javascript-capstone/dist/) to visit the app
 
+## Video Link
+[Youtube Link](https://youtu.be/9pukR3Mrl68)
+
 ## Built With
 
 - JavaScript
