@@ -33,3 +33,11 @@ body {
 .show {
   display: block;
 }
+
+.likes {
+  text-align: right;
+}
+
+.likes::after {
+  content: " Likes";
+}

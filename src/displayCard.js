@@ -3,11 +3,9 @@ import popUp from './utilities.js';
 
 const like = new Like();
 
-export function countMeal(res) {
-  return res.meals.length;
-}
+export const countMeal = (res) => res.meals.length;
 
-export default function displayCard(res) {
+export const displayCard = (res) => {
   const grid = document.getElementById('meals-grid');
   grid.innerHTML = '';
   for (let i = 0; i < 8; i += 1) {
@@ -33,4 +31,4 @@ export default function displayCard(res) {
 
   const numOfMeals = document.querySelector('.meals-count');
   numOfMeals.innerHTML = `Meals  (${countMeal(res)})`;
-}
+};

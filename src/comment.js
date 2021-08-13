@@ -2,12 +2,12 @@ import API from './api.js';
 
 const api = new API();
 
-export function countComment(res) {
+export const countComment = (res) => {
   if (res.length > 0) {
     return res.length;
   }
   return 0;
-}
+};
 
 export default class Comment {
   create() {
