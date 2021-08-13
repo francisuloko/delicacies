@@ -1,9 +1,7 @@
 import Like from './like.js';
-import Comment from './comment.js';
-import { popUp } from './utilities.js';
+import popUp from './utilities.js';
 
 const like = new Like();
-const comment = new Comment();
 
 export function countMeal(res) {
   return res.meals.length;
@@ -26,14 +24,13 @@ export default function displayCard(res) {
   }
 
   const likeButtons = document.querySelectorAll('.like-button');
-  const commentButtons = document.querySelectorAll('.comment-button')
-  
-  
-  for(let i=0; i < commentButtons.length; i+=1){
+  const commentButtons = document.querySelectorAll('.comment-button');
+
+  for (let i = 0; i < commentButtons.length; i += 1) {
     commentButtons[i].addEventListener('click', popUp);
     likeButtons[i].addEventListener('click', like.create);
   }
-  
+
   const numOfMeals = document.querySelector('.meals-count');
   numOfMeals.innerHTML = `Meals  (${countMeal(res)})`;
 }
