@@ -33,16 +33,3 @@ body {
 .show {
   display: block;
 }
-
-.likes {
-  text-align: right;
-}
-
-.likes::after {
-  content: " Likes";
-}
-
-footer {
-  border-top-style: solid;
-  border-top-color: #333;
-}

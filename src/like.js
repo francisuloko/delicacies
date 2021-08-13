@@ -1,7 +1,6 @@
 import API from './api.js';
 
 const api = new API();
-
 const likeButtons = document.querySelectorAll('.like-button');
 export default class Like {
   create(e) {
