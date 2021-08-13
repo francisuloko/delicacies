@@ -2,8 +2,32 @@ import API from './api.js';
 
 const api = new API();
 
+
+export function countComment(res) {
+  if(res.length > 0){
+    return res.length;
+  } else {
+    return 0;
+  }
+}
+
 export default class Comment {
-  create(data) {
+  create() {
+    const name = document.getElementById('username').value
+    const comment = document.getElementById('message').value
+    let ul = document.getElementById('user-comments');
+    const li = `<li>
+        <span>Just now</span>
+        <span>${name}</span>
+        <span>${comment}</span>
+      </li>`;
+    ul.innerHTML += li;
+    let id = document.getElementById('add-comment').getAttribute('data-commentID')
+    const data = {
+      item_id: id,
+      username: name,
+      comment: comment,
+    }
     api.post(api.urls.comments, data)
       .then((saved) => saved)
       .catch((err) => err);
@@ -15,33 +39,16 @@ export default class Comment {
 
   show(res) {
     this.res = res;
-    let modal = document.getElementById('modal2');
-    modal.innerHTML = '';
-    const details = `
-      <div class="w-50">
-        <img src="" alt="" />
-        <div class="constainer>
-          <h4>Food Name</h4>
-          <div class="row">
-            <div class="col-sm-3 themed-grid-col"></div>
-            <div class="col-sm-3 themed-grid-col"></div>
-            <div class="col-sm-3 themed-grid-col"></div>
-            <div class="col-sm-3 themed-grid-col"></div>
-          </div>
-        </div>
-        <div>
-          <h4 class="comment-counter">(Counter)</h4>
-          <ul id="user-comments">
-            <li>Comment 1</li>
-          </ul>
-        </div>
-        <form>
-          <input type="text" name="username" id="username">
-          <input type="text" name="message" id="message">
-          <button type="button" class="btn-primary" id=""comment-button">Add comment</button>
-        </form>
-      </div>`;
-    // modal += details;
-    modal.innerHTML = details
+    let ul = document.getElementById('user-comments');
+    const numOfComments = document.querySelector('.comment-count');
+    numOfComments.innerHTML = `Comment  (${countComment(res)})`;
+    for(let i=0; i < res.length; i += 1){
+      const li = `<li class="li-comment">
+        <span>${res[i].creation_date}</span>
+        <span>${res[i].username}</span>
+        <span>${res[i].comment}</span>
+      </li>`;
+      ul.innerHTML += li;
+    }
   }
 }
