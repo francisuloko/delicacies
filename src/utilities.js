@@ -4,7 +4,7 @@ import Comment from './comment.js';
 const api = new API();
 const comment = new Comment();
 
-export default function popUp(e) {
+const popUp = (e) => {
   const mealID = e.target.dataset.id;
   const modal = document.getElementById('modal');
   modal.classList.toggle('hide');
@@ -46,4 +46,6 @@ export default function popUp(e) {
       closeModal.addEventListener('click', () => { modal.classList.toggle('hide'); });
     }));
   comment.get(Number(mealID));
-}
+};
+
+export { popUp as default };
