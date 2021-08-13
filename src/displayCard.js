@@ -26,14 +26,13 @@ export default function displayCard(res) {
   }
 
   const likeButtons = document.querySelectorAll('.like-button');
-  const commentButtons = document.querySelectorAll('.comment-button')
-  
-  
-  for(let i=0; i < commentButtons.length; i+=1){
+  const commentButtons = document.querySelectorAll('.comment-button');
+
+  for (let i = 0; i < commentButtons.length; i += 1) {
     commentButtons[i].addEventListener('click', popUp);
     likeButtons[i].addEventListener('click', like.create);
   }
-  
+
   const numOfMeals = document.querySelector('.meals-count');
   numOfMeals.innerHTML = `Meals  (${countMeal(res)})`;
 }

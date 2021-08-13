@@ -1,16 +1,16 @@
-import API from "./api.js";
-import Comment from "./comment.js";
+import API from './api.js';
+import Comment from './comment.js';
 
-const api = new API()
+const api = new API();
 const comment = new Comment();
 
 export function popUp(e) {
   const mealID = e.target.dataset.id;
-  let modal = document.getElementById('modal');
-  modal.classList.toggle('hide')
+  const modal = document.getElementById('modal');
+  modal.classList.toggle('hide');
   modal.innerHTML = '';
   api.get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealID}`)
-    .then((res => {
+    .then(((res) => {
       const details = `
         <div class="w-50 mx-auto p-2 bg-light" id="details">
           <div class="d-flex flex-sm-column flex-lg-row">
@@ -39,11 +39,11 @@ export function popUp(e) {
             </div>
           </div>
         </div>`;
-      modal.innerHTML += details
-      const addCommentButton = document.getElementById('add-comment')
+      modal.innerHTML += details;
+      const addCommentButton = document.getElementById('add-comment');
       const closeModal = document.getElementById('close-modal');
       addCommentButton.addEventListener('click', comment.create);
-      closeModal.addEventListener('click', () => { modal.classList.toggle('hide')});
-    }))
+      closeModal.addEventListener('click', () => { modal.classList.toggle('hide'); });
+    }));
   comment.get(Number(mealID));
 }

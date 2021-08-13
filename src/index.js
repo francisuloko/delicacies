@@ -10,4 +10,3 @@ api.get(api.urls.meals).then((meals) => displayCard(meals));
 const likes = new Like();
 const comments = new Comment();
 likes.get();
-
