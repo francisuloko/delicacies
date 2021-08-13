@@ -1,7 +1,7 @@
 /**
  * @jest-environment jsdom
  */
- import { countMeal } from "../src/displayCard.js";
+import { countMeal } from '../src/displayCard.js';
 import { countComment } from '../src/comment.js';
 
 test('number of comments', () => {

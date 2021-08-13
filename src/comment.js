@@ -4,6 +4,8 @@ const api = new API();
 
 export function countComment(res) {
   if (res.length > 0) {
+    const numOfComments = document.querySelector('.comment-count');
+    numOfComments.innerHTML = `Comment  (${res.length})`;
     return res.length;
   }
   return 0;
@@ -11,9 +13,9 @@ export function countComment(res) {
 
 export default class Comment {
   create() {
+    this.null = '';
     const name = document.getElementById('username');
     const comment = document.getElementById('message');
-    console.log(name);
     const ul = document.getElementById('user-comments');
     if (name.value !== '' && comment.value !== '') {
       const li = `<li>

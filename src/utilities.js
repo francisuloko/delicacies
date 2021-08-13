@@ -4,7 +4,7 @@ import Comment from './comment.js';
 const api = new API();
 const comment = new Comment();
 
-export function popUp(e) {
+export default function popUp(e) {
   const mealID = e.target.dataset.id;
   const modal = document.getElementById('modal');
   modal.classList.toggle('hide');
@@ -34,7 +34,7 @@ export function popUp(e) {
               </form>
             </div>
             <div class="w-100 mx-3">
-              <p class="comment-count text-center my-1 p-0"></p>
+              <span class="comment-count text-center my-1 pb-2"></span>
               <ul id="user-comments" class="p-0 m-0"></ul>
             </div>
           </div>

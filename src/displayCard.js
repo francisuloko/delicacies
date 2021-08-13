@@ -1,9 +1,7 @@
 import Like from './like.js';
-import Comment from './comment.js';
-import { popUp } from './utilities.js';
+import popUp from './utilities.js';
 
 const like = new Like();
-const comment = new Comment();
 
 export function countMeal(res) {
   return res.meals.length;

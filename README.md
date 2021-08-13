@@ -7,10 +7,25 @@
 <img src="./src/assets/images/popup-screenshot.png" width=350 height="250">
 
 
-This is a collaborative capstone proeject where the team is tasked to build a web app that displays list of food items form The Meals DB API and create and display user reactions such Like and Comment using Microverse Involvement API.
+This is a collaborative capstone proeject where the team is tasked to build a web app that displays list of food items form The Meals DB API and create and display Usedr reactions such Like and Comment using Microverse Involvement API.
 
-In this project, we have implemented the following:
-1. 
+In this project, we have:
+
+- Used JavaScript to make websites dynamic and build basic single  page apps.
+- Used ES6 syntax.
+- Used ES6 modules.
+- Used callbacks and promises.
+- Used webpack.
+- Applied JavaScript best practices and language style guides in code.
+- Used AAA pattern for unit tests.
+- Wrote units tests for a JavaScript app.
+- Follow Gitflow.
+- Solved simple git conflicts.
+- Sent and receive data from an API.
+- Used API documentation.
+- Understood and Used JSON.
+- Made JavaScript code synchronous.
+- Performed a code review for a team member.
 
 ## Live Demo
 Click [here](https://francisuloko.github.io/javascript-capstone/dist/) to visit the app
@@ -24,7 +39,7 @@ Click [here](https://francisuloko.github.io/javascript-capstone/dist/) to visit 
 - bootstrap 5
 - The Meals DB API
 
-# API 
+## API 
 - [The Meals DB API](https://www.themealdb.com/api.php)
 - [Microverse Involment API](https://www.notion.so/microverse/Involvement-API-869e60b5ad104603aa6db59e08150270)
 
@@ -66,11 +81,10 @@ To get a local copy up and running follow these simple steps:
 
 ## Author
 
-👤 **Francis Uloko**
-
-- [GitHub](https://github.com/francisuloko)
-- [Twitter](https://twitter.com/francisuloko)
-- [LinkedIn](https://linkedin.com/in/francisuloko)
+👤 **Ijay Abby**
+- GitHub: [@IjayAbby](https://github.com/IjayAbby)
+- Twitter: [@Ijay_js](https://twitter.com/Ijay_js)
+- LinkedIn: [Abigael Nyangasi](https://www.linkedin.com/in/ijayabby4/)
 
 👤 **Francis Uloko**
 
