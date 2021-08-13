@@ -1,7 +1,7 @@
 /**
  * @jest-environment jsdom
  */
-
+ import { countMeal } from "../src/displayCard.js";
 import { countComment } from '../src/comment.js';
 
 test('number of comments', () => {
@@ -23,5 +23,23 @@ test('number of comments', () => {
     },
   ];
   const count = countComment(comments);
+  expect(count).toBe(3);
+});
+
+test('number of meals', () => {
+  const obj = {
+    meals: [
+      {
+        item_id: 'item1',
+      },
+      {
+        item_id: 'item2',
+      },
+      {
+        item_id: 'item3',
+      },
+    ],
+  };
+  const count = countMeal(obj);
   expect(count).toBe(3);
 });

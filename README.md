@@ -1,12 +1,16 @@
 # javascript-capstone
 
 > JavaScript Capstone Project to Build an API-based Web App
+[Collaborative Project]
 
 <img src="./src/assets/images/homepage-screenshot.png" width=350 height="250">
 <img src="./src/assets/images/popup-screenshot.png" width=350 height="250">
 
 
-> This is a collaborative capstone proeject where the team is tasked to build a web app that displays list of food items form theMealsDB API.
+This is a collaborative capstone proeject where the team is tasked to build a web app that displays list of food items form The Meals DB API and create and display user reactions such Like and Comment using Microverse Involvement API.
+
+In this project, we have implemented the following:
+1. 
 
 ## Live Demo
 Click [here](https://francisuloko.github.io/javascript-capstone/dist/) to visit the app
@@ -61,6 +65,12 @@ To get a local copy up and running follow these simple steps:
    
 
 ## Author
+
+👤 **Francis Uloko**
+
+- [GitHub](https://github.com/francisuloko)
+- [Twitter](https://twitter.com/francisuloko)
+- [LinkedIn](https://linkedin.com/in/francisuloko)
 
 👤 **Francis Uloko**
 
