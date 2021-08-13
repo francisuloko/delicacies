@@ -36,8 +36,7 @@ export function popUp(e) {
             </div>
             <div class="w-100 mx-3">
               <p class="comment-count text-center my-1 p-0"></p>
-              <ul id="user-comments" class="p-0 m-0">
-              </ul>
+              <ul id="user-comments" class="p-0 m-0"></ul>
             </div>
           </div>
         </div>`;

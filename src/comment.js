@@ -19,7 +19,7 @@ export default class Comment {
     if (name.value !== '' && comment.value !== '') {
       const li = `<li>
         <span>Just now</span>
-        <span>${name.value}</span>
+        <span>${name.value}: </span>
         <span>${comment.value}</span>
       </li>`;
       ul.innerHTML += li;
@@ -35,7 +35,7 @@ export default class Comment {
       name.value = '';
       comment.value = '';
     } else {
-      ul.innerHTML += `<li>Input cannot be empty</li>`
+      ul.innerHTML += `<li class="text-danger">Input cannot be empty</li>`
       setTimeout(()=>{ ul.removeChild(ul.lastElementChild) }, 3000)
     }
   }
@@ -52,7 +52,7 @@ export default class Comment {
     for (let i = 0; i < res.length; i += 1) {
       const li = `<li class="li-comment">
         <span>${res[i].creation_date}</span>
-        <span>${res[i].username}</span>
+        <span>${res[i].username}: </span>
         <span>${res[i].comment}</span>
       </li>`;
       ul.innerHTML += li;
