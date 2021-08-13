@@ -44,5 +44,4 @@ export function popUp(e) {
       closeModal.addEventListener('click', () => { modal.classList.toggle('hide')});
     }))
   comment.get(Number(mealID));
-  
 }
