@@ -28,7 +28,7 @@ In this project, we have:
 - Performed a code review for a team member.
 
 ## Live Demo
-Click [here](https://francisuloko.github.io/javascript-capstone/dist/) to visit the app
+Click [here](https://francisuloko.github.io/delicacies/dist/) to visit the app
 
 ## Video Link
 [Youtube Link](https://youtu.be/9pukR3Mrl68)
