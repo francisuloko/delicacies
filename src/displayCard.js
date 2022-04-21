@@ -22,6 +22,7 @@ export const displayCard = (res) => {
       <div class="d-flex align-items-center justify-content-between">
         <div class="m-0 p-0">
           <span id="meal-${res.meals[i].idMeal}-likes" class="d-flex align-items-center likes text-secondary">0</span>
+          <span id="meal-${res.meals[i].idMeal}-comment" class="d-flex align-items-center comments text-secondary">0</span>
         </div>
         <div class="d-flex align-items-center">
           <button type="button" class="like-button btn text-primary">
