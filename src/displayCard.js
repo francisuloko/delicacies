@@ -1,18 +1,21 @@
-import Like from "./like.js";
-import popUp from "./utilities.js";
+import API from './api.js';
+import Like from './like.js';
+import popUp from './utilities.js';
 
+const api = new API();
 const like = new Like();
 
 export const countMeal = (res) => res.meals.length;
+// const commentCount = res => res.comment.length;
 
 export const displayCard = (res) => {
-  const grid = document.getElementById("meals-grid");
-  grid.innerHTML = "";
+  const grid = document.getElementById('meals-grid');
+  grid.innerHTML = '';
   for (let i = 0; i < 12; i += 1) {
-    const card = document.createElement("div");
+    const card = document.createElement('div');
     card.setAttribute(
-      "class",
-      "card col-sm-3 shadow themed-grid-col m-2 p-0 d-flex flex-column justify-content-between"
+      'class',
+      'card col-sm-3 shadow themed-grid-col m-2 p-0 d-flex flex-column justify-content-between',
     );
     card.innerHTML = `
       <img src="${res.meals[i].strMealThumb}" class="w-100" alt="sample image">
@@ -36,14 +39,21 @@ export const displayCard = (res) => {
     grid.appendChild(card);
   }
 
-  const likeButtons = document.querySelectorAll(".like-button");
-  const commentButtons = document.querySelectorAll(".comment-button");
+  const likeButtons = document.querySelectorAll('.like-button');
+  const commentButtons = document.querySelectorAll('.comment-button');
 
   for (let i = 0; i < commentButtons.length; i += 1) {
-    commentButtons[i].addEventListener("click", popUp);
-    likeButtons[i].addEventListener("click", like.create);
+    commentButtons[i].addEventListener('click', popUp);
+    likeButtons[i].addEventListener('click', like.create);
   }
 
-  const numOfMeals = document.querySelector(".meals-count");
+  const numOfMeals = document.querySelector('.meals-count');
   numOfMeals.innerHTML = `Meals  (${countMeal(res)})`;
+  
+  for (let i = 0; i < 13; i += 1) {
+    const comment = document.getElementById(`meal-${res.meals[i].idMeal}-comment`);
+    api.get(api.urls.newComment + res.meals[i].idMeal).then((comments) => {
+      comment.innerHTML = comments.length ? comments.length : 0;
+    });
+  }
 };

@@ -1,14 +1,14 @@
-import API from "./api.js";
-import Comment from "./comment.js";
+import API from './api.js';
+import Comment from './comment.js';
 
 const api = new API();
 const comment = new Comment();
 
 const popUp = (e) => {
   const mealID = e.target.dataset.id;
-  const modal = document.getElementById("modal");
-  modal.classList.toggle("hide");
-  modal.innerHTML = "";
+  const modal = document.getElementById('modal');
+  modal.classList.toggle('hide');
+  modal.innerHTML = '';
   api
     .get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealID}`)
     .then((res) => {
@@ -34,7 +34,6 @@ const popUp = (e) => {
                 <div class="w-100">
                   <p id="error" class="text-danger fs-6 m-0 p-0"></p>
                   <div class="w-100">
-                    <p class="comment-count text-center my-1 p-0"></p>
                     <ul id="user-comments" class="p-0 m-0"></ul>
                   </div>
                   <form class="my-2 text-center">
@@ -53,11 +52,11 @@ const popUp = (e) => {
           </div>
         </div>`;
       modal.innerHTML += details;
-      const addCommentButton = document.getElementById("add-comment");
-      const closeModal = document.getElementById("close-modal");
-      addCommentButton.addEventListener("click", comment.create);
-      closeModal.addEventListener("click", () => {
-        modal.classList.toggle("hide");
+      const addCommentButton = document.getElementById('add-comment');
+      const closeModal = document.getElementById('close-modal');
+      addCommentButton.addEventListener('click', comment.create);
+      closeModal.addEventListener('click', () => {
+        modal.classList.toggle('hide');
       });
     });
   comment.get(Number(mealID));
