@@ -5,7 +5,27 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #bbdffb;
+  background-color: #eee;
+}
+
+.row {
+  padding: 10px;
+}
+
+.card {
+  border: 10px solid #ffe;
+  border-bottom-color: orange;
+  background-color: #ffe;
+  border-radius: 10px;
+}
+
+.comment-button {
+  background-color: transparent;
+  border: none;
+}
+
+.bi-heart-fill {
+  color: black;
 }
 
 #modal {
@@ -34,10 +54,25 @@ body {
   display: block;
 }
 
-.likes {
-  text-align: right;
+.likes,
+.comments {
+  font-size: 12px;
 }
 
 .likes::after {
-  content: " Likes";
+  content: "Likes";
+  margin-left: 5px;
+}
+
+.comments::after {
+  content: "Comments";
+  margin-left: 5px;
+}
+
+button {
+  outline: none;
+}
+
+ul.ingredients li {
+  font-size: 12px;
 }

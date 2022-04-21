@@ -1,19 +1,15 @@
 import API from './api.js';
 
 const api = new API();
-const likeButtons = document.querySelectorAll('.like-button');
 export default class Like {
   create(e) {
-    const meal = e.target;
-    api.post(api.urls.likes, { item_id: meal.id })
+    this.meal = e.target;
+    const likesCount = document.getElementById(`meal-${this.meal.id}-likes`);
+    api
+      .post(api.urls.likes, { item_id: this.meal.id })
       .then((saved) => saved)
       .catch((err) => err);
-    const elem = document.getElementById(meal.id);
-    const likes = Number(elem.parentNode.nextSibling.innerHTML) + 1;
-    elem.parentNode.nextSibling.innerHTML = likes;
-    likeButtons.forEach((button) => {
-      button.addEventListener('click', this.create);
-    });
+    likesCount.innerHTML = +likesCount.innerHTML + 1;
   }
 
   get() {
@@ -24,7 +20,7 @@ export default class Like {
     this.res = res;
     const items = document.querySelectorAll('.likes');
     for (let i = 0; i < items.length; i += 1) {
-      items[i].innerHTML = res[i].likes;
+      items[i].innerHTML = this.res[i].likes;
     }
   }
 }

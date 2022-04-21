@@ -59,9 +59,9 @@ To get a local copy up and running follow these simple steps:
 
    - `Open terminal Ctrl + Alt + T`
 
-   - `git clone git@github.com:francisuloko/javascript-capstone.git`
+   - `git clone git@github.com:francisuloko/delicacies.git`
 
-   - `cd javascript-capstone`
+   - `cd delicacies`
 
    - `npm install`
 
@@ -100,7 +100,7 @@ To get a local copy up and running follow these simple steps:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/francisuloko/javascript-capstone/issues).
+Feel free to check the [issues page](https://github.com/francisuloko/delicacies/issues).
 
 
 ## Show your support
