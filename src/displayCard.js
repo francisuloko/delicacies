@@ -8,7 +8,7 @@ export const countMeal = (res) => res.meals.length;
 export const displayCard = (res) => {
   const grid = document.getElementById("meals-grid");
   grid.innerHTML = "";
-  for (let i = 0; i < 8; i += 1) {
+  for (let i = 0; i < 12; i += 1) {
     const card = document.createElement("div");
     card.setAttribute(
       "class",
@@ -16,12 +16,12 @@ export const displayCard = (res) => {
     );
     card.innerHTML = `
       <img src="${res.meals[i].strMealThumb}" class="w-100" alt="sample image">
-      <div class="fs-5 my-2">
-        <span class="w-100">${res.meals[i].strMeal}</span>
+      <div class="my-1">
+        <span class="fs-6 w-100">${res.meals[i].strMeal}</span>
       </div>
       <div class="d-flex align-items-center justify-content-between">
         <div class="m-0 p-0">
-          <span id="meal-${res.meals[i].idMeal}-likes" class="d-flex align-items-center likes text-secondary"></span>
+          <span id="meal-${res.meals[i].idMeal}-likes" class="d-flex align-items-center likes text-secondary">0</span>
         </div>
         <div class="d-flex align-items-center">
           <button type="button" class="like-button btn text-primary">

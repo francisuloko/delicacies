@@ -59,6 +59,10 @@ body {
 }
 
 .likes::after {
-  content: " Likes";
+  content: "likes";
   margin-left: 5px;
+}
+
+button {
+  outline: none;
 }
