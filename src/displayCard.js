@@ -49,7 +49,7 @@ export const displayCard = (res) => {
 
   const numOfMeals = document.querySelector('.meals-count');
   numOfMeals.innerHTML = `Meals  (${countMeal(res)})`;
-  
+
   for (let i = 0; i < 13; i += 1) {
     const comment = document.getElementById(`meal-${res.meals[i].idMeal}-comment`);
     api.get(api.urls.newComment + res.meals[i].idMeal).then((comments) => {

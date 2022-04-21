@@ -3,10 +3,10 @@ import API from './api.js';
 const api = new API();
 export default class Like {
   create(e) {
-    const meal = e.target;
-    const likesCount = document.getElementById(`meal-${e.target.id}-likes`);
+    this.meal = e.target;
+    const likesCount = document.getElementById(`meal-${this.meal.id}-likes`);
     api
-      .post(api.urls.likes, { item_id: meal.id })
+      .post(api.urls.likes, { item_id: this.meal.id })
       .then((saved) => saved)
       .catch((err) => err);
     likesCount.innerHTML = +likesCount.innerHTML + 1;
