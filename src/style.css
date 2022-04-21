@@ -5,7 +5,27 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: #eee;
+}
+
+.row {
+  padding: 10px;
+}
+
+.card {
+  border: 10px solid #ffe;
+  border-bottom-color: orange;
   background-color: #ffe;
+  border-radius: 10px;
+}
+
+.comment-button {
+  background-color: transparent;
+  border: none;
+}
+
+.bi-heart-fill {
+  color: black;
 }
 
 #modal {
@@ -35,9 +55,10 @@ body {
 }
 
 .likes {
-  text-align: right;
+  font-size: 12px;
 }
 
 .likes::after {
   content: " Likes";
+  margin-left: 5px;
 }
