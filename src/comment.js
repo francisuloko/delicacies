@@ -51,7 +51,7 @@ export default class Comment {
     this.res = res;
     for (let i = 0; i < this.res.length; i += 1) {
       document.getElementById('user-comments')
-      .innerHTML += `<li class="d-flex flex-column justify-content-between">
+        .innerHTML += `<li class="d-flex flex-column justify-content-between">
         <span class="mb-2">${this.res[i].username}</span>
         </span><span>${this.res[i].comment}</span>
       </li>`;

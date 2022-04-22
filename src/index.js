@@ -1,6 +1,6 @@
 import API from './api.js';
 import './style.css';
-import { displayCard } from './displayCard.js';
+import displayCard from './displayCard.js';
 import Like from './like.js';
 
 const api = new API();

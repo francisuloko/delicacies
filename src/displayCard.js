@@ -5,7 +5,7 @@ import popUp from './utilities.js';
 const api = new API();
 const like = new Like();
 
-export const displayCard = (res) => {
+const displayCard = (res) => {
   const grid = document.getElementById('meals-grid');
   grid.innerHTML = '';
   for (let i = 0; i < 12; i += 1) {
@@ -51,3 +51,5 @@ export const displayCard = (res) => {
     });
   }
 };
+
+export default displayCard;
