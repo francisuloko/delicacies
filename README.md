@@ -3,8 +3,8 @@
 > JavaScript Capstone Project to Build an API-based Web App
 [Collaborative Project]
 
-<img src="./src/assets/images/homepage-screenshot.png" width=350 height="250">
-<img src="./src/assets/images/popup-screenshot.png" width=350 height="250">
+<img src="./src/assets/images/homepage-screenshot.png">
+<img src="./src/assets/images/popup-screenshot.png">
 
 
 This is a collaborative capstone proeject where the team is tasked to build a web app that displays list of food items form The Meals DB API and create and display Usedr reactions such Like and Comment using Microverse Involvement API.
