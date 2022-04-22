@@ -1,8 +1,9 @@
 /**
  * @jest-environment jsdom
  */
-import { countMeal } from '../src/displayCard.js';
 import { countComment } from '../src/comment.js';
+
+const countMeal = (data) => data.meals.length;
 
 test('number of comments', () => {
   const comments = [

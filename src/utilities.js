@@ -17,7 +17,7 @@ const popUp = (e) => {
           <div class="container d-flex p-0">
             <div class="row">
               <div class="d-none d-md-block col-md-3 text-center">
-                <img src="${res.meals[0].strMealThumb}" class="w-100 rounded-pill" alt="${res.meals[0].strMeal}" />
+                <img src="${res.meals[0].strMealThumb}" class="w-75 rounded-pill" alt="${res.meals[0].strMeal}" />
                 <h6 class="py-2 m-0">${res.meals[0].strMeal}</h6>
                 <div class="p-0 m-0">
                   <ul class="ingredients m-0 p-0">
@@ -36,16 +36,14 @@ const popUp = (e) => {
                   <div class="w-100">
                     <ul id="user-comments" class="p-0 m-0"></ul>
                   </div>
-                  <form class="my-2 mx-1 mx-auto w-75 text-center d-flex flex-wrap">
+                  <form class="my-2 mx-1 text-center d-flex flex-wrap">
                     <input class="form-control" type="text" name="username" id="username" placeholder="Name" />
                     <input class="form-control my-1" type="text" name="message" id="message" placeholder="Comment"/>
+                    <div class="text-end m-0 p-0">
                     <button type="button" class="btn-success" id="add-comment" data-commentID="${res.meals[0].idMeal}">Add comment</button>
+                    <button type="button" class="btn-secondary" id="close-modal">Cancel</button>
+                  </div>
                   </form>
-                </div>
-                <div class="text-end m-0 p-0">
-                  <button type="button" class="like-button btn p-0 ms-1" id="close-modal">
-                    <i class="bi bi-x-circle text-danger fs-4"></i>
-                  </button>
                 </div>
               </div>
               </div>

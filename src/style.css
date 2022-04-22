@@ -76,3 +76,17 @@ button {
 ul.ingredients li {
   font-size: 12px;
 }
+
+#user-comments {
+  overflow-y: scroll;
+  scrollbar-width: none;
+  height: 400px;
+}
+
+#user-comments li {
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  padding: 10px;
+  margin: 5px;
+}
