@@ -47,8 +47,7 @@ export const displayCard = (res) => {
     likeButtons[i].addEventListener('click', like.create);
   }
 
-  const numOfMeals = document.querySelector('.meals-count');
-  numOfMeals.innerHTML = `Meals  (${countMeal(res)})`;
+  document.querySelector('.meals-count').innerHTML = `Meals  (${countMeal(res)})`;
 
   for (let i = 0; i < 13; i += 1) {
     const comment = document.getElementById(`meal-${res.meals[i].idMeal}-comment`);

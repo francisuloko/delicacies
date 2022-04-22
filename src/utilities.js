@@ -36,7 +36,7 @@ const popUp = (e) => {
                   <div class="w-100">
                     <ul id="user-comments" class="p-0 m-0"></ul>
                   </div>
-                  <form class="my-2 mx-1 mx-auto w-75 text-center d-flex flex-wrap">
+                  <form class="my-2 mx-1 text-center d-flex flex-wrap">
                     <input class="form-control" type="text" name="username" id="username" placeholder="Name" />
                     <input class="form-control my-1" type="text" name="message" id="message" placeholder="Comment"/>
                     <button type="button" class="btn-success" id="add-comment" data-commentID="${res.meals[0].idMeal}">Add comment</button>
