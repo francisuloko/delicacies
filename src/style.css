@@ -14,7 +14,7 @@ body {
 
 .card {
   border: 10px solid #ffe;
-  border-bottom-color: #000;
+  border-bottom-color: orange;
   background-color: #ffe;
   border-radius: 10px;
 }
