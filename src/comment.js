@@ -17,9 +17,9 @@ export default class Comment {
     const ul = document.getElementById('user-comments');
     const err = document.getElementById('error');
     if (name.value !== '' && comment.value !== '') {
-      ul.innerHTML += `<li class="d-flex justify-content-between">
+      ul.innerHTML += `<li class="d-flex flex-column justify-content-between">
+      <span>${name.value}</span>
       </span><span>${comment.value}</span>
-      <span>${comment.username}</span>
     </li>`;
       const id = document
         .getElementById('add-comment')
@@ -51,9 +51,9 @@ export default class Comment {
     this.res = res;
     for (let i = 0; i < this.res.length; i += 1) {
       document.getElementById('user-comments')
-      .innerHTML += `<li class="d-flex justify-content-between">
+      .innerHTML += `<li class="d-flex flex-column justify-content-between">
+        <span class="mb-2">${this.res[i].username}</span>
         </span><span>${this.res[i].comment}</span>
-        <span>${this.res[i].username}</span>
       </li>`;
     }
   }
