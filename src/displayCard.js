@@ -5,9 +5,6 @@ import popUp from './utilities.js';
 const api = new API();
 const like = new Like();
 
-export const countMeal = (res) => res.meals.length;
-// const commentCount = res => res.comment.length;
-
 export const displayCard = (res) => {
   const grid = document.getElementById('meals-grid');
   grid.innerHTML = '';
@@ -46,8 +43,6 @@ export const displayCard = (res) => {
     commentButtons[i].addEventListener('click', popUp);
     likeButtons[i].addEventListener('click', like.create);
   }
-
-  document.querySelector('.meals-count').innerHTML = `Meals  (${countMeal(res)})`;
 
   for (let i = 0; i < 13; i += 1) {
     const comment = document.getElementById(`meal-${res.meals[i].idMeal}-comment`);

@@ -18,7 +18,6 @@ export default class Like {
 
   show(res) {
     this.res = res;
-    console.log(res);
     const items = document.querySelectorAll('.likes');
     for (let i = 0; i < items.length; i += 1) {
       items[i].innerHTML = this.res[i].likes;
