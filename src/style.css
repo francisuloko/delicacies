@@ -80,7 +80,7 @@ ul.ingredients li {
 #user-comments {
   overflow-y: scroll;
   scrollbar-width: none;
-  height: 400px;
+  height: 350px;
 }
 
 #user-comments li {
