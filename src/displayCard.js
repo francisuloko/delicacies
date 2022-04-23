@@ -12,7 +12,7 @@ const displayCard = (res) => {
     const card = document.createElement('div');
     card.setAttribute(
       'class',
-      'card col-sm-3 shadow themed-grid-col m-2 p-0 d-flex flex-column justify-content-between',
+      'card col-sm-3 col-md-4 col-lg-3 shadow themed-grid-col m-2 p-0 d-flex flex-column justify-content-between',
     );
     card.innerHTML = `
       <img src="${res.meals[i].strMealThumb}" class="w-100" alt="sample image">
